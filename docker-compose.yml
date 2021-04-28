@@ -27,10 +27,10 @@ services:
         - ./influxdb-volume:/var/lib/influxdb
     environment:
         - INFLUXDB_DB=ciscomdt
-    #    - INFLUXDB_USER=ciscomdt
+        - INFLUXDB_USER=ciscomdt
         - INFLUXDB_ADMIN_ENABLED=true
-        - INFLUXDB_ADMIN_USER=cisco
-        - INFLUXDB_ADMIN_PASSWORD=Cisco123
+        - INFLUXDB_ADMIN_USER=XXXXXX # your username
+        - INFLUXDB_ADMIN_PASSWORD=YYYYY # your password
     restart: always
 
   grafana:
