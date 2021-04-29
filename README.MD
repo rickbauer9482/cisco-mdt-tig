@@ -15,7 +15,7 @@ Now you ready to sent telemetry data from your Cisco routers and switches.
 
 Subsequentially, you can run "docker-compose stop" and "docker-compose start" to stop and start your new containers.
 
-This link from Cisco DEVNET should get you started with the Telemetry subscriptions on you XE devices.
+This link from Cisco DEVNET should get you started with the Telemetry subscriptions on you IOS-XE devices.
 
 https://developer.cisco.com/docs/ios-xe/#!streaming-telemetry-quick-start-guide/enabling-streaming-telemetry
 
