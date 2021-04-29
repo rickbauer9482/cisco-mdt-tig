@@ -13,6 +13,7 @@ You will have to configure the data souce in Grafana with the information you us
 
 Now you ready to sent telemetry data from your Cisco routers and switches.
 
+Subsequentially, you can run "docker-compose stop" and "docker-compose start" to stop and start your new containers.
 
 This link from Cisco DEVNET should get you started.
 
