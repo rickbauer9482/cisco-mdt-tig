@@ -5,8 +5,11 @@ Simply copy the repo the folder where you want to run docker-compose from, modif
 Example: Docker-Tig is my working directory
 
 Docker-Tig/docker-compose.yml
+
 Docker-Tig/telgraph.conf
+
 Docker-Tig/grafana-volume
+
 Docker-Tig/influx-volume
 
 You will have to configure the data souce in Grafana with the information you used in your telegraf.conf file.
