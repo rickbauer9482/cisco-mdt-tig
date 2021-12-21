@@ -14,7 +14,7 @@ Docker-Tig/influx-volume
 
 You will have to configure the data souce in Grafana with the information you used in your telegraf.conf file.
 
-Now you ready to receive telemetry data from your Cisco routers and switches.
+Now you ready to receive telemetry data from your Cisco routers and switches. Add your IP Address to the Telemetery sample configuration file and cut and paste to you switches.
 
 Subsequentially, you can run "docker-compose stop" and "docker-compose start" to stop and start your new containers.
 
