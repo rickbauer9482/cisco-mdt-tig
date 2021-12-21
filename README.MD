@@ -12,6 +12,8 @@ Docker-Tig/grafana-volume
 
 Docker-Tig/influx-volume
 
+Docker-Tig/telegraf.conf
+
 You will have to configure the data souce in Grafana with the information you used in your telegraf.conf file.
 
 Now you ready to receive telemetry data from your Cisco routers and switches.
