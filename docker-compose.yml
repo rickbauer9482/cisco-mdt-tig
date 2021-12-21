@@ -1,48 +1,43 @@
-version: "2"
+version: '3.9'
+volumes:
+  influxdb-volume:
 
 services:
-  telegraf:
-    image: telegraf:1.18.1-alpine
-    container_name: telegraf
-    depends_on: 
-        - "influxdb"
-    ports:
-        - 57500:57500
-    volumes:
-        - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
-    tty: true
-    networks:
-        - tig-net
-    privileged: true
-    restart: always
-
   influxdb:
     image: influxdb:1.8
     container_name: influxdb
     expose:
         - 8086
-    networks:
-        - tig-net
-    volumes:
-        - ./influxdb-volume:/var/lib/influxdb
     environment:
         - INFLUXDB_DB=ciscomdt
-        - INFLUXDB_USER=ciscomdt
         - INFLUXDB_ADMIN_ENABLED=true
-        - INFLUXDB_ADMIN_USER=XXXXXX # your username
-        - INFLUXDB_ADMIN_PASSWORD=YYYYY # your password
+        - INFLUXDB_ADMIN_USER=Same USERNAME from Telegraf config 
+        - INFLUXDB_ADMIN_PASSWORD=Same PASSWORD from Telegraf config 
+    volumes:
+        - influxdb-volume:/var/lib/influxdb
+    restart: always
+
+  telegraf:
+    # image: telegraf:1.18.1-alpine
+    container_name: telegraf
+    depends_on: 
+        - influxdb
+    build:
+      context: ./telegraf
+    ports:
+        - 57500:57500
+    volumes:
+        - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
+        - ./telegraf-volume:/home
+    tty: true
+    privileged: true
     restart: always
 
   grafana:
-    image: grafana/grafana:7.5.4
+    image: grafana/grafana:7.5.11
     container_name: grafana
     ports:
         - 3000:3000
-    networks:
-        - tig-net
     volumes:
         - ./grafana-volume:/var/lib/grafana
     restart: always    
-
-networks:
-  tig-net:
