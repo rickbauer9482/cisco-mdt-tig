@@ -1,1 +1,1 @@
-These are the telemetry subsciptions that will be applied to your devices. You will need to change the source-address and receiver ip address to meet the needs of your environment.
+These are the telemetry subsciptions that will be applied to your IOS-XE devices. You will need to change the source-address and receiver ip address to meet the needs of your environment.
