@@ -8,9 +8,9 @@ Docker-Tig/docker-compose.yml
 
 Docker-Tig/telgraph.conf
 
-Docker-Tig/grafana-volume
+Docker-Tig/grafana-volume/
 
-Docker-Tig/influx-volume
+Docker-Tig/influx-volume/
 
 You will have to configure the data souce in Grafana with the information you used in your telegraf.conf file.
 
