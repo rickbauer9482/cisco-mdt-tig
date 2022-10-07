@@ -1,6 +1,6 @@
 Create at Telegraf, InfluxDB, and Grafana (TIG) stack using docker-compose
 
-Simply copy the repo the folder where you want to run docker-compose from, modify the docker-compose.ylm and telegraf.conf files for your needs. Local volumes for the contailers will be created in the working directory where you run the "docker-compose up -d" commnad.
+Simply copy the repo the folder where you want to run docker-compose from, modify the docker-compose.yml and telegraf.conf files for your needs. Local volumes for the contailers will be created in the working directory where you run the "docker-compose up -d" commnad.
 
 Example: Docker-Tig is my working directory
 
