@@ -1,0 +1,176 @@
+telemetry ietf subscription 1
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/dot11-oper-data
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 2
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/traffic-stats
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 3
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/dot11-oper-data
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 4
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/traffic-stats
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 5
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/dc-info
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 6
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/sisf-db-mac
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 7
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/client-wsa-info
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 8
+ encoding encode-kvgpb
+ filter xpath /wireless-access-point-oper:access-point-oper-data/radio-oper-stats
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 9
+ encoding encode-kvgpb
+ filter xpath /wireless-access-point-oper:access-point-oper-data/ap-name-mac-map
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 10
+ encoding encode-kvgpb
+ filter xpath /wireless-access-point-oper:access-point-oper-data/capwap-data
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 11
+ encoding encode-kvgpb
+ filter xpath /wireless-access-point-oper:access-point-oper-data/radio-oper-data
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 12
+ encoding encode-kvgpb
+ filter xpath /wireless-access-point-oper:access-point-oper-data/ssid-counters
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 13
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/common-oper-data
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 14
+ encoding encode-kvgpb
+ filter xpath /wireless-rrm-oper:rrm-oper-data/rrm-measurement
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 15
+ encoding encode-kvgpb
+ filter xpath /wireless-mobility-oper:mobility-oper-data/mobility-node-data
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 16
+ encoding encode-kvgpb
+ filter xpath /wireless-mobility-oper:mobility-oper-data/wlan-client-limit
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 17
+ encoding encode-kvgpb
+ filter xpath /wireless-access-point-oper:access-point-oper-data
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 18
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 19
+ encoding encode-kvgpb
+ filter xpath /wireless-location-oper:location-oper-data
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 20
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/common-oper-data/username
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 21
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/client-wsa-info
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
+telemetry ietf subscription 22
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/dc-info
+ source-address 172.30.1.249
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.9 57500 protocol grpc-tcp
+
