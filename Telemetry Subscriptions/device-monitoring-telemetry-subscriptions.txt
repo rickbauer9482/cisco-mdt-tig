@@ -1,0 +1,155 @@
+telemetry ietf subscription 100
+ encoding encode-kvgpb
+ filter xpath /process-cpu-ios-xe-oper:cpu-usage/cpu-utilization/five-seconds
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 500
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 101
+ encoding encode-kvgpb
+ filter xpath /poe-ios-xe-oper:poe-oper-data/poe-port/oper-power
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 500
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 102
+ encoding encode-kvgpb
+ filter xpath /interfaces-ios-xe-oper:interfaces/interface[name='GigabitEthernet1/0/1']/statistics
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 500
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 103
+ encoding encode-kvgpb
+ filter xpath /flow-monitors/flow-export-statistics/export-client/protocol-stats/records-dropped
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 500
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 104
+ encoding encode-kvgpb
+ filter xpath /interfaces/interface/statistics
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 500
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 105
+ encoding encode-kvgpb
+ filter xpath /native/flow/ios-flow:record/ios-flow:match/ios-flow:policy/ios-flow:qos
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 500
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 199
+ encoding encode-kvgpb
+ filter xpath /platform-ios-xe-oper:components
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 500
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+
+telemetry ietf subscription 3301
+ encoding encode-kvgpb
+ filter xpath /oc-platform:components/component/state/temperature
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 3302
+ encoding encode-kvgpb
+ filter xpath /oc-platform:components/component/fan/state
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 3303
+ encoding encode-kvgpb
+ filter xpath /oc-sys:system/state
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 3304
+ encoding encode-kvgpb
+ filter xpath /oc-platform:components/component/power-supply/state
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 3305
+ encoding encode-kvgpb
+ filter xpath /process-cpu-ios-xe-oper:cpu-usage/cpu-utilization
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 3306
+ encoding encode-kvgpb
+ filter xpath /matm-ios-xe-oper:matm-oper-data
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 3307
+ encoding encode-kvgpb
+ filter xpath /memory-ios-xe-oper:memory-statistics/memory-statistic
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 3308
+ encoding encode-kvgpb
+ filter xpath /poe-ios-xe-oper:poe-oper-data
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 3309
+ encoding encode-kvgpb
+ filter xpath /ios:native
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 3310
+ encoding encode-kvgpb
+ filter xpath /mdt-oper:mdt-oper-data/mdt-subscriptions
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 3311
+ encoding encode-kvgpb
+ filter xpath /cdp-ios-xe-oper:cdp-neighbor-details
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 3312
+ encoding encode-kvgpb
+ filter xpath /arp-ios-xe-oper:arp-data
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 3313
+ encoding encode-kvgpb
+ filter xpath /oc-if:interfaces/interface/state/counters
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 3314
+ encoding encode-kvgpb
+ filter xpath /interfaces-ios-xe-oper:interfaces/interface
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
+telemetry ietf subscription 3315
+ encoding encode-kvgpb
+ filter xpath /if:interfaces-state
+ source-address 172.30.1.254
+ stream yang-push
+ update-policy periodic 3000
+ receiver ip address 172.30.1.180 57500 protocol grpc-tcp
