@@ -1,24 +1,26 @@
 version: '3.9'
+
 volumes:
   influxdb-volume:
+  telegraf-volume:
 
 services:
   influxdb:
     image: influxdb:1.8
     container_name: influxdb
-    expose:
-        - 8086
+    ports:
+        - 8086:8086
     environment:
         - INFLUXDB_DB=ciscomdt
         - INFLUXDB_ADMIN_ENABLED=true
-        - INFLUXDB_ADMIN_USER=Same USERNAME from Telegraf config 
-        - INFLUXDB_ADMIN_PASSWORD=Same PASSWORD from Telegraf config 
+        - INFLUXDB_ADMIN_USER=cisco 
+        - INFLUXDB_ADMIN_PASSWORD=Cisco123 
     volumes:
-        - influxdb-volume:/var/lib/influxdb
+        - influxdb-volume:/var/lib/influxdb:rw
     restart: always
 
   telegraf:
-    # image: telegraf:1.18.1-alpine
+    image: telegraf:latest
     container_name: telegraf
     depends_on: 
         - influxdb
@@ -34,10 +36,10 @@ services:
     restart: always
 
   grafana:
-    image: grafana/grafana:7.5.11
+    image: grafana/grafana:8.2.6
     container_name: grafana
     ports:
         - 3000:3000
     volumes:
         - ./grafana-volume:/var/lib/grafana
-    restart: always    
+    restart: always
